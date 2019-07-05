@@ -3,14 +3,17 @@
   "version": "v0.0.1",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-class-properties": "^6.11.5",
     "babel-plugin-transform-react-jsx": "^6.8.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "snyk": "^1.192.0"
   },
   "babel": {
     "plugins": [
@@ -22,5 +25,6 @@
       ],
       "transform-class-properties"
     ]
-  }
+  },
+  "snyk": true
 }
